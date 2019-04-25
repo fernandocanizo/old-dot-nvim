@@ -12,8 +12,8 @@ set shiftwidth=2
 " number of spaces for a tab in editing operations
 set softtabstop=2
 
-" 125 columns is good for git's pull request view
-set textwidth=125
+" 125 columns is good for git's pull request view, but I like to work with vsplits
+set textwidth=75
 
 set smartindent
 
@@ -35,6 +35,9 @@ set title
 
 " show the cursor position all the time
 set ruler
+
+" highlight column when you get too wide
+set colorcolumn=75
 
 set statusline=%f%m%r%h%w\ ff=%{&ff}\ ft=%Y\ lines=%L\ %p%%\ LINE=%l\ COL=%v
 
