@@ -47,8 +47,10 @@ set nojoinspaces
 " allow me to switch to another buffer even if I haven't written my changes
 set hidden
 
-" highlight current line
+" highlight current line and column
 set cursorline
+set cursorcolumn
+
 " toggle current line highlighting
 map <F6> :set cursorline!<enter>:set cursorline?<enter>
 
