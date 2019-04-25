@@ -36,7 +36,7 @@ set title
 " show the cursor position all the time
 set ruler
 
-set statusline=[LINE=%l]\ [COL=%v]\ %f%m%r%h%w\ [FORMAT=%{&ff}]\ [FILETYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [%p%%]\ [LINES=%L]
+set statusline=%f%m%r%h%w\ ff=%{&ff}\ ft=%Y\ lines=%L\ %p%%\ LINE=%l\ COL=%v
 
 " place only a single space between sentences when joinging lines.
 set nojoinspaces
