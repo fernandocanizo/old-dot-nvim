@@ -51,6 +51,10 @@ set hidden
 set cursorline
 set cursorcolumn
 
+" more intuitive way to put the new split
+set splitbelow
+set splitright
+
 " toggle current line highlighting
 map <F6> :set cursorline!<enter>:set cursorline?<enter>
 
