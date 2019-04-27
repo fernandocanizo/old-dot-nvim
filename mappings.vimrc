@@ -35,3 +35,14 @@ set pastetoggle=<F5>
 " this mapping copies from XA_SECONDARY (clipboard)
 " equivalent to CTRL-V in other editors
 map <Leader>p "+gP
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
