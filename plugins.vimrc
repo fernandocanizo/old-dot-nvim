@@ -8,6 +8,10 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged-in')
 " Conquer of Completion nightly build
 Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+
+Plug 'https://github.com/scrooloose/nerdtree'
+map <Leader>t :NERDTreeToggle<enter>
 
 " Initialize plugin system
 call plug#end()
