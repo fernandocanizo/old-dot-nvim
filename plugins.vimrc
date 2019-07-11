@@ -15,5 +15,8 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/scrooloose/nerdtree'
 map <Leader>t :NERDTreeToggle<enter>
 
+" Show difference on files already in git repo
+Plug 'https://github.com/airblade/vim-gitgutter'
+
 " Initialize plugin system
 call plug#end()
