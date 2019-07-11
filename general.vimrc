@@ -87,3 +87,7 @@ autocmd BufReadPost * if line("'\"") | exe "'\"" | endif
 
 " Open files completely unfolded
 au BufRead * normal zR
+
+" So vim-gutter (and other based on this setting) reports faster
+" default is 4000 (4 seconds) which is too much
+set updatetime=100
