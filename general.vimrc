@@ -11,7 +11,14 @@ set tabstop=2
 set shiftwidth=2
 " number of spaces for a tab in editing operations
 set softtabstop=2
+" Insert `tabstop` number of spaces when the `tab` key is pressed
+set smarttab
 set smartindent
+" When shifting lines, round the indentation to the nearest multiple of
+" `shiftwidth`
+set shiftround
+" New lines inherit the indentation of previous lines
+set autoindent
 
 
 " 125 columns is good for git's pull request view
@@ -80,3 +87,7 @@ autocmd BufReadPost * if line("'\"") | exe "'\"" | endif
 
 " Open files completely unfolded
 au BufRead * normal zR
+
+" So vim-gutter (and other based on this setting) reports faster
+" default is 4000 (4 seconds) which is too much
+set updatetime=100
