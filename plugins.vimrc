@@ -20,3 +20,5 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 
 " Initialize plugin system
 call plug#end()
+
+let g:ctrlp_custom_ignore = '\v([\/]\.(git)|node_modules|android)$'
