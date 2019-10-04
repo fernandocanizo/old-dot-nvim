@@ -18,6 +18,12 @@ nmap <c-l> :bnext<enter>
 map <C-j> <C-e>j
 map <C-k> <C-y>k
 
+" highlight searches
+nnoremap / :set hls<enter>/\v
+nnoremap ? :set hls<enter>?\v
+nnoremap # :set hls<enter>#\v
+nnoremap * :set hls<enter>*\v
+
 " toggle search highlighting
 map <F7> :set hls!<enter>:set hls?<enter>
 
