@@ -35,6 +35,18 @@ nmap q :q<enter>
 vmap <tab> >>
 vmap <S-tab> <<
 
+" F1 shell-like line commenting
+nmap <F1> 0i#<esc>j
+imap <F1> <esc>0i#<esc>j
+
+" F2 shell-like line uncommenting
+nmap <F2> :s/^#//e<return>:noh<return>j
+imap <F2> <esc>:s/^#//e<return>:noh<return>j
+
+" line separator
+nmap <F3> o<esc>a#<esc>79.
+imap <F3> <esc>0a#<esc>79.o
+
 set pastetoggle=<F5>
 
 " shift+insert copies from XA_PRIMARY (mouse selection)
