@@ -70,17 +70,13 @@ set cursorline
 set splitbelow
 set splitright
 
-" by albertito@lugfi: hl in red spaces after text on EOL
-highlight WhiteSpaceEOL ctermbg=red guibg=red
-match WhiteSpaceEOL /\v\s+$/
-
-" by luca@lugfi: hl in red spaces at the beginning
-highlight SpaceError ctermbg=red
-match SpaceError /\v^( +|\t +)\S*/
-match SpaceError /\v\s+$/
-
-" mark any tabs that are not at the beginning of the line as an error
-match errorMsg /[^\t]\zs\t\+/
+" highlight unwanted spaces:
+" - no trailing spaces
+" - no tab/spaces mixing
+" - no empty lines with spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/
 
 " jump to last position we were editing on this file
 autocmd BufReadPost * if line("'\"") | exe "'\"" | endif
