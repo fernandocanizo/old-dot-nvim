@@ -1,5 +1,3 @@
-colorscheme elflord
-
 """""""""""""
 " INDENTATION
 """""""""""""
@@ -64,6 +62,12 @@ set nojoinspaces
 set hidden
 
 " highlight current line
+" Note: for some reason this doesn't work from here, but if you put it as
+" ex command by hand, does work (WTF?!)
+hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white
+map <F6> :set cursorline!<enter>:set cursorline?<enter>
+nnoremap <Leader>c :set cursorcolumn!<enter>:set cursorcolumn?<enter>
 set cursorline
 
 " more intuitive way to put the new split
