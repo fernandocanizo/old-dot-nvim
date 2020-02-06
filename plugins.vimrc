@@ -21,6 +21,27 @@ Plug 'https://github.com/airblade/vim-gitgutter'
 " Run programs asynchronous (for linting)
 Plug 'https://github.com/neomake/neomake'
 
+" Themes
+Plug 'https://github.com/tomasr/molokai'
+Plug 'https://github.com/tpope/vim-vividchalk'
+Plug 'https://github.com/bluz71/vim-moonfly-colors'
+Plug 'https://github.com/rakr/vim-one'
+Plug 'https://github.com/akmassey/vim-codeschool'
+Plug 'https://github.com/altercation/vim-colors-solarized'
+
+" Preview colors in source code while editing
+Plug 'https://github.com/ap/vim-css-color'
+
+" A light and configurable statusline/tabline
+" better than:
+" - vim-powerline
+" - powerline
+" - vim-airline
+Plug 'https://github.com/itchyny/lightline.vim'
+
+" Manage git from vim
+Plug 'https://github.com/tpope/vim-fugitive'
+
 " Initialize plugin system
 call plug#end()
 
@@ -45,3 +66,6 @@ else
 endif
 
 let g:ctrlp_custom_ignore = '\v([\/]\.(git)|node_modules|android)$'
+
+" 2019.11.08 a probar:
+" Plug 'https://github.com/zxqfl/tabnine-vim'
