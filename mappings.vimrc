@@ -18,6 +18,12 @@ nmap <c-l> :bnext<enter>
 map <C-j> <C-e>j
 map <C-k> <C-y>k
 
+" highlight searches
+nnoremap / :set hls<enter>/\v
+nnoremap ? :set hls<enter>?\v
+nnoremap # :set hls<enter>#\v
+nnoremap * :set hls<enter>*\v
+
 " toggle search highlighting
 map <F7> :set hls!<enter>:set hls?<enter>
 
@@ -28,6 +34,18 @@ nmap q :q<enter>
 " Indenting
 vmap <tab> >>
 vmap <S-tab> <<
+
+" F1 shell-like line commenting
+nmap <F1> 0i#<esc>j
+imap <F1> <esc>0i#<esc>j
+
+" F2 shell-like line uncommenting
+nmap <F2> :s/^#//e<return>:noh<return>j
+imap <F2> <esc>:s/^#//e<return>:noh<return>j
+
+" line separator
+nmap <F3> o<esc>a#<esc>79.
+imap <F3> <esc>0a#<esc>79.o
 
 set pastetoggle=<F5>
 
@@ -51,3 +69,11 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " don't loose your vertical split when closing a buffer
 nnoremap <C-c> :bp\|bd #<enter>
+
+" Neomake (review later and choose my own)
+nmap <Leader><Space>o :lopen<CR>      " open location window
+nmap <Leader><Space>c :lclose<CR>     " close location window
+nmap <Leader><Space>, :ll<CR>         " go to current error/warning
+nmap <Leader><Space>n :lnext<CR>      " next error/warning
+nmap <Leader><Space>p :lprev<CR>      " previous error/warning
+
