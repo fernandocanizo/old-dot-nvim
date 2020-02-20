@@ -11,8 +11,8 @@ imap <F2> <esc>:s/\v^(\s*)\/\//\1/e<return>:noh<return>j
 vmap <F2> :s/\v^(\s*)\/\//\1/<enter>
 
 " F3 structured comment
-map <F3> o<esc>i/<esc>79.yyp0O//<space>
-imap <F3> <esc>o<esc>i/<esc>79.yyp0O//<space>
+map <F3> o<esc>i/<esc>73.yyp0O<space>
+imap <F3> <esc>o<esc>i/<esc>73.yyp0O//<space>
 
 " F4 file header
 map <F4> <esc>1GO'use strict';<esc>o<esc>
