@@ -1,4 +1,4 @@
-set textwidth=0
+setlocal textwidth=0
 
 " don't hide quotes
-set conceallevel=0
+setlocal conceallevel=0
