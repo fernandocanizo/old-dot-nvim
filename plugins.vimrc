@@ -42,6 +42,9 @@ Plug 'https://github.com/itchyny/lightline.vim'
 " Manage git from vim
 Plug 'https://github.com/tpope/vim-fugitive'
 
+" Add guiding lines
+Plug 'https://github.com/thaerkh/vim-indentguides'
+
 " Initialize plugin system
 call plug#end()
 
