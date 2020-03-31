@@ -94,3 +94,6 @@ au! BufNewFile,BufRead *.svelte set ft=html
 " So vim-gutter (and other based on this setting) reports faster
 " default is 4000 (4 seconds) which is too much
 set updatetime=100
+
+" regexp: set very magic when doing global substitutions
+cnoremap %s/ %s/\v
