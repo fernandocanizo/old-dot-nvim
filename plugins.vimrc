@@ -28,6 +28,7 @@ Plug 'https://github.com/bluz71/vim-moonfly-colors'
 Plug 'https://github.com/rakr/vim-one'
 Plug 'https://github.com/akmassey/vim-codeschool'
 Plug 'https://github.com/altercation/vim-colors-solarized'
+Plug 'https://github.com/marcopaganini/termschool-vim-theme'
 
 " Preview colors in source code while editing
 Plug 'https://github.com/ap/vim-css-color'

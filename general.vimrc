@@ -82,6 +82,19 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/
 
+" to set the proper color for colorscheme one
+set background=dark
+"colorscheme elflord
+"colorscheme molokai
+"colorscheme vividchalk
+"colorscheme moonfly
+"colorscheme one
+"colorscheme termschool
+
+"hi CursorLine cterm=NONE ctermbg=darkgrey
+" highlight current line the same way on any colorscheme
+autocmd ColorScheme * highlight StatusLine ctermbg=darkgrey cterm=NONE guibg=darkgrey gui=NONE
+
 " jump to last position we were editing on this file
 autocmd BufReadPost * if line("'\"") | exe "'\"" | endif
 
