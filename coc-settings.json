@@ -14,5 +14,12 @@
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     }
+  },
+  "languangeserver": {
+    "javascript": {
+      "command": "javascript-typescript-langserver",
+      "args": ["--strict"],
+      "filetypes": ["js"]
+    }
   }
 }
