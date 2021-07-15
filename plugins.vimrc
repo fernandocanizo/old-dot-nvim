@@ -84,7 +84,7 @@ let g:coc_node_path = '/home/flc/.config/nvm/versions/node/v16.0.0/bin/node'
 " Kite when necessary, so we only manage its configuration here
 
 " Kite only supports Python and Javascript so far on vim/neovim
-let g:kite_supported_languages = ['python', 'javascript']
+let g:kite_supported_languages = ['bash', 'python', 'javascript', 'css', 'html', 'jsx', 'typescript', 'vue']
 
 " Use TAB key to insert the completion instead of <C-y>
 let g:kite_tab_complete=1
