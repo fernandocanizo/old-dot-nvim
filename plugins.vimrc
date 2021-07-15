@@ -76,3 +76,17 @@ let g:ctrlp_custom_ignore = '\v([\/]\.(git)|node_modules|android)$'
 
 " 2019.11.08 a probar:
 " Plug 'https://github.com/zxqfl/tabnine-vim'
+
+let g:coc_node_path = '/home/flc/.config/nvm/versions/node/v16.0.0/bin/node'
+
+" https://github.com/kiteco/vim-plugin configuration
+" this plugin was installed by Kite and will be automatically updated by
+" Kite when necessary, so we only manage its configuration here
+
+" Kite only supports Python and Javascript so far on vim/neovim
+let g:kite_supported_languages = ['python', 'javascript']
+
+" Use TAB key to insert the completion instead of <C-y>
+let g:kite_tab_complete=1
+
+set completeopt+=menuone
