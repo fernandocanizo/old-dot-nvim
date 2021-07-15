@@ -90,3 +90,22 @@ let g:kite_supported_languages = ['python', 'javascript']
 let g:kite_tab_complete=1
 
 set completeopt+=menuone
+
+" lightline
+set laststatus=2 " always show status line
+
+" don't show the -- INSERT -- in insert mode. Mode is already shown by
+set noshowmode
+let g:lightline = {
+  \ 'colorscheme': 'wombat',
+  \ 'active': {
+  \   'left': [
+  \     [ 'mode', 'paste' ],
+  \     [ 'readonly', 'filename', 'modified', 'kiteStatus', 'gitbranch' ]
+  \   ]
+  \ },
+  \ 'component': {
+  \   'kiteStatus': '%{kite#statusline()}',
+  \   'gitbranch': '%{FugitiveStatusline()}'
+  \ },
+  \ }
