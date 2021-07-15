@@ -1,7 +1,8 @@
 # dot-nvim
-nvim configuration
 
-1. Execute `install` script to get [Plug]()
+Neovim configuration
+
+1. Execute `install` script to get [Plug](https://github.com/junegunn/vim-plug/)
 
 2. Export `XDG_CONFIG_HOME` shell environment variable so `nvim` knows where to
    find all it's configuration files, which are separated according to function.
@@ -12,7 +13,7 @@ nvim configuration
 
 Get installer
 ```
-yay -S kite # to get the installer
+yay -S kite # to get the installer on Archlinux/Manjaro
 ```
 
 Install it to your user
