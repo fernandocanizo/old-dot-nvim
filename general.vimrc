@@ -43,18 +43,6 @@ set nowrapscan
 " show xterm title
 set title
 
-" show the cursor position all the time
-"set ruler
-
-" filename isModified isReadOnly isHelp isPreview
-" fileformat
-" filetype
-" lines
-" percentage
-" current line
-" current column
-set statusline=%f%m%r%h%w\ ff=%{&ff}\ ft=%Y\ lines=%L\ %p%%\ LINE=%l\ COL=%v
-
 " place only a single space between sentences when joinging lines.
 set nojoinspaces
 
