@@ -89,7 +89,7 @@ let g:kite_supported_languages = ['bash', 'python', 'javascript', 'css', 'html',
 " Use TAB key to insert the completion instead of <C-y>
 let g:kite_tab_complete=1
 
-set completeopt+=menuone
+set completeopt+=menuone,noinsert,noselect
 
 " lightline
 set laststatus=2 " always show status line
