@@ -89,6 +89,9 @@ let g:kite_supported_languages = ['bash', 'python', 'javascript', 'css', 'html',
 " Use TAB key to insert the completion instead of <C-y>
 let g:kite_tab_complete=1
 
+" Uncomment next setting for Kite debugging
+"let g:kite_log=1
+
 set completeopt+=menuone,noinsert,noselect
 
 " lightline
