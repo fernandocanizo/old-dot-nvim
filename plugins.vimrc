@@ -72,6 +72,8 @@ else
   let g:neomake_jsx_enabled_makers = ['prettier']
 endif
 
+let g:neomake_python_enabled_makers = ['pylint']
+
 let g:ctrlp_custom_ignore = '\v([\/]\.(git)|node_modules|android)$'
 
 " 2019.11.08 a probar:
