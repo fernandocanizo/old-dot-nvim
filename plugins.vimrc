@@ -49,6 +49,9 @@ Plug 'https://github.com/tpope/vim-fugitive'
 " cumbersome (it hides the quotes)
 " See https://github.com/thaerkh/vim-indentguides/issues/17
 
+" map on brackets common pairs of commands
+Plug 'https://github.com/tpope/vim-unimpaired'
+
 " Initialize plugin system
 call plug#end()
 
