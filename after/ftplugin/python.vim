@@ -21,4 +21,7 @@ imap <F10> <esc>:lclose<enter>
 
 set textwidth=88
 
+" always use python3
+set pyxversion=3
+
 "echoerr "Loading my Python settings"
