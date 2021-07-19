@@ -92,7 +92,11 @@ let g:kite_tab_complete=1
 " Uncomment next setting for Kite debugging
 "let g:kite_log=1
 
-set completeopt+=menuone,noinsert,noselect
+" completeopt+=noselect disables tab completion, don't use it
+set completeopt+=menuone,noinsert
+
+" automatically close preview window
+autocmd CompleteDone * if !pumvisible() | pclose | endif
 
 " lightline
 set laststatus=2 " always show status line
