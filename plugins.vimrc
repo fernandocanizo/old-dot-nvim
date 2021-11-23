@@ -3,18 +3,24 @@
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged-in')
 
 " Make sure you use single quotes when using Plug command
+" Also, put the full URL to project, (easier to check it on the browser)
 
-" Find files quickly
+" Completion: main one
+Plug 'https://github.com/ms-jpq/coq_nvim', {'branch': 'coq'}
+" Completion: 9000+ Snippets
+Plug 'https://github.com/ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
+" Files: find files quickly
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
-" Navigate files
+" Files: navigator
 Plug 'https://github.com/scrooloose/nerdtree'
 map <Leader>t :NERDTreeToggle<enter>
 
 " Show difference on files already in git repo
 Plug 'https://github.com/airblade/vim-gitgutter'
 
-" Run programs asynchronous (for linting)
+" Linting: Run programs asynchronous
 Plug 'https://github.com/neomake/neomake'
 
 " Themes
