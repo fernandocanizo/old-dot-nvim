@@ -49,6 +49,11 @@ youtuber
   With that claim in the README I have to try it. Also comes from the author of
   `coq.nvim` which will be my next completion plugin.
 
+- https://github.com/zxqfl/tabnine-vim
+  2019.11.08
+  Pero ojo! Viene arrastrando un problema de consumo de memoria desde 2019:
+  https://github.com/codota/TabNine/issues/43
+
 
 ## History
 

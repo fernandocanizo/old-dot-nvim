@@ -78,9 +78,6 @@ let g:neomake_python_enabled_makers = ['pylint']
 
 let g:ctrlp_custom_ignore = '\v([\/]\.(git)|node_modules|android)$'
 
-" 2019.11.08 a probar:
-" Plug 'https://github.com/zxqfl/tabnine-vim'
-
 " completeopt+=noselect disables tab completion, don't use it
 set completeopt+=menuone,noinsert
 
