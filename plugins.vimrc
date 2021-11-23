@@ -4,10 +4,6 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged-in')
 
 " Make sure you use single quotes when using Plug command
 
-" Conquer of Completion nightly build
-Plug 'https://github.com/neoclide/coc.nvim', {'do': './install.sh nightly'}
-
-
 " Find files quickly
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
