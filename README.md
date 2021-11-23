@@ -1,6 +1,7 @@
 # dot-nvim
 
-Neovim configuration
+This is my Neovim configuration, with an installer to have new machines editor
+running as I'm used to in not time.
 
 1. Execute `install` script to get [Plug](https://github.com/junegunn/vim-plug/)
 
