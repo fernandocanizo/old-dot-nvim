@@ -52,6 +52,9 @@ Plug 'https://github.com/tpope/vim-fugitive'
 " map on brackets common pairs of commands
 Plug 'https://github.com/tpope/vim-unimpaired'
 
+" honor .editorconfig files on projects
+Plug 'https://github.com/editorconfig/editorconfig-vim'
+
 " Initialize plugin system
 call plug#end()
 
