@@ -22,7 +22,8 @@ set autoindent
 " 125 columns is good for git's pull request view
 " but I like to work with vsplits, hence this width
 set textwidth=75
-" highlight next column after textwidth
+" highlight next column after textwidth (vertical red bar to show visually
+" when to stop writting or wrap manually some code)
 set colorcolumn=+1
 
 
