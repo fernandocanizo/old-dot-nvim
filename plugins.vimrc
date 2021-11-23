@@ -87,19 +87,6 @@ let g:ctrlp_custom_ignore = '\v([\/]\.(git)|node_modules|android)$'
 
 let g:coc_node_path = '/home/flc/.config/nvm/versions/node/v16.0.0/bin/node'
 
-" https://github.com/kiteco/vim-plugin configuration
-" this plugin was installed by Kite and will be automatically updated by
-" Kite when necessary, so we only manage its configuration here
-
-" Kite only supports Python and Javascript so far on vim/neovim
-let g:kite_supported_languages = ['bash', 'python', 'javascript', 'css', 'html', 'jsx', 'typescript', 'vue']
-
-" Use TAB key to insert the completion instead of <C-y>
-let g:kite_tab_complete=1
-
-" Uncomment next setting for Kite debugging
-"let g:kite_log=1
-
 " completeopt+=noselect disables tab completion, don't use it
 set completeopt+=menuone,noinsert
 
@@ -116,11 +103,10 @@ let g:lightline = {
   \ 'active': {
   \   'left': [
   \     [ 'mode', 'paste' ],
-  \     [ 'readonly', 'filename', 'modified', 'kiteStatus', 'gitbranch' ]
+  \     [ 'readonly', 'filename', 'modified', 'gitbranch' ]
   \   ]
   \ },
   \ 'component': {
-  \   'kiteStatus': '%{kite#statusline()}',
   \   'gitbranch': '%{FugitiveStatusline()}'
   \ },
   \ }

@@ -9,20 +9,3 @@ Neovim configuration
 
 3. Inside neovim run `:PlugInstall`
 
-## Kite: machine learning autocompletion
-
-Get installer
-```
-yay -S kite # to get the installer on Archlinux/Manjaro
-```
-
-Install it to your user
-```
-/opt/kite/kite-installer install
-```
-
-Start it and start it automatically on next reboot
-```
-systemctl --user start kite-autostart
-systemctl --user enable kite-autostart
-```
