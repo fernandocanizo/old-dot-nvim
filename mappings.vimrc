@@ -77,3 +77,9 @@ nmap <Leader><Space>, :ll<CR>         " go to current error/warning
 nmap <Leader><Space>n :lnext<CR>      " next error/warning
 nmap <Leader><Space>p :lprev<CR>      " previous error/warning
 
+" Chadtree toggle
+nnoremap <leader>t <cmd>CHADopen<cr>
+" clear quick fix list (suggested in chadtree readme)
+nnoremap <leader>l <cmd>call setqflist([])<cr>
+
+

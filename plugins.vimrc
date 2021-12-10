@@ -14,8 +14,7 @@ Plug 'https://github.com/ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
 " Files: navigator
-Plug 'https://github.com/scrooloose/nerdtree'
-map <Leader>t :NERDTreeToggle<enter>
+Plug 'https://github.com/ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 " Show difference on files already in git repo
 Plug 'https://github.com/airblade/vim-gitgutter'
