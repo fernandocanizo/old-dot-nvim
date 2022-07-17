@@ -99,3 +99,11 @@ set updatetime=100
 
 " regexp: set very magic when doing global substitutions
 cnoremap %s/ %s/\v
+
+" completeopt+=noselect disables tab completion, don't use it
+set completeopt+=menuone,noinsert
+
+" automatically close preview window
+autocmd CompleteDone * if !pumvisible() | pclose | endif
+
+

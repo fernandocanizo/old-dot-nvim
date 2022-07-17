@@ -80,12 +80,6 @@ let g:neomake_python_enabled_makers = ['pylint']
 
 let g:ctrlp_custom_ignore = '\v([\/]\.(git)|node_modules|android)$'
 
-" completeopt+=noselect disables tab completion, don't use it
-set completeopt+=menuone,noinsert
-
-" automatically close preview window
-autocmd CompleteDone * if !pumvisible() | pclose | endif
-
 " lightline
 set laststatus=2 " always show status line
 
