@@ -1,0 +1,1 @@
+-- vim.api.nvim_set_keymap(mode, lhs, rhs, options_table)
