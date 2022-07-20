@@ -59,7 +59,7 @@ vim.cmd('hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey 
 vim.cmd('hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white')
 -- vim.api.nvim_set_keymap(mode, lhs, rhs, options_table)
 vim.api.nvim_set_keymap('nvso', '<F6>' ':set cursorline!<enter>:set cursorline?<enter>')
-vim.api.nvim_set_keymap('n', '<Leader>c', ':set cursorcolumn!<enter>:set cursorcolumn?<enter>', { nnoremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>c', ':set cursorcolumn!<enter>:set cursorcolumn?<enter>', { noremap = true })
 vim.opt.cursorline = true
 -- highlight current line the same way on any colorscheme
 vim.cmd('autocmd ColorScheme * highlight StatusLine ctermbg=darkgrey cterm=NONE guibg=darkgrey gui=NONE')
