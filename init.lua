@@ -4,5 +4,6 @@ if vim.g.vscode then
 else
   -- normal neovim
   require('plugins')
+  require('setup-plugins')
   require('general')
 end
