@@ -6,4 +6,7 @@ else
   require('plugins')
   require('setup-plugins')
   require('general')
+  
+  vim.cmd 'source ~/.config/nvim/old-configs/mappings.vimrc'
+  --require('test')
 end
