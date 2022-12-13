@@ -5,6 +5,7 @@ else
   -- normal neovim
   require('plugins')
   require('setup-plugins')
+  require('style')
   require('general')
   
   vim.cmd 'source ~/.config/nvim/old-configs/mappings.vimrc'
