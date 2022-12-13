@@ -3,6 +3,7 @@ if vim.g.vscode then
   -- running as VSCode extension
 else
   -- normal neovim
+  require('bootstrap-packer')
 --  require('general')
 --  require('plugins')
 --  require('ctrlp')
