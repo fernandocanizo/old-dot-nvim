@@ -25,7 +25,8 @@ vim.opt.textwidth = 65
 -- highlight next column after textwidth (vertical red bar to
 -- show visually when to stop writting or wrap manually some
 -- code)
-vim.opt.colorcolumn = +1
+-- TODO '+' gives error
+--vim.opt.colorcolumn = +1
 
 -- TODO it would be nice to have wrap on when on a comment and
 -- off when on code
@@ -58,7 +59,8 @@ vim.opt.hidden = true
 vim.cmd('hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white')
 vim.cmd('hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white')
 -- vim.api.nvim_set_keymap(mode, lhs, rhs, options_table)
-vim.api.nvim_set_keymap('nvso', '<F6>' ':set cursorline!<enter>:set cursorline?<enter>')
+-- TODO next line gives error
+--vim.api.nvim_set_keymap('nvso', '<F6>' ':set cursorline!<enter>:set cursorline?<enter>')
 vim.api.nvim_set_keymap('n', '<Leader>c', ':set cursorcolumn!<enter>:set cursorcolumn?<enter>', { noremap = true })
 vim.opt.cursorline = true
 -- highlight current line the same way on any colorscheme
@@ -75,20 +77,23 @@ vim.opt.splitright = true
 --   - no empty lines with spaces
 vim.cmd('highlight ExtraWhitespace ctermbg=red guibg=red')
 vim.cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red')
-vim.cmd('match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/')
+-- TODO fix next line, buggy
+--vim.cmd('match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/')
 
 -- style
 vim.opt.background = 'dark'
-vim.cmd('colorscheme vividchalk')
+vim.cmd('colorscheme elflord')
 
 -- to last position we were editing on this file
-vim.cmd('autocmd BufReadPost * if line("'\"") | exe "'\"" | endif')
+-- TODO fix next line, buggy
+--vim.cmd('autocmd BufReadPost * if line("'\"") | exe "'\"" | endif')
 
 -- Open files completely unfolded
 vim.cmd('au BufRead * normal zR')
 
 -- Consider .svelte files as HTML
-win.cdm('au! BufNewFile,BufRead *.svelte set ft=html')
+-- TODO fix next line, buggy
+--win.cdm('au! BufNewFile,BufRead *.svelte set ft=html')
 
 -- So vim-gutter (and other based on this setting) reports faster
 -- default is 4000 (4 seconds) which is too much
@@ -98,7 +103,8 @@ vim.opt.updatetime = 100
 vim.api.nvim_set_keymap('c', '%s/', '%s/\v', { noremap = true })
 
 -- completeopt+=noselect disables tab completion, don't use it
-vim.opt.completeopt.append('menuone', 'noinsert')
+-- TODO fix next line, buggy
+--vim.opt.completeopt.append('menuone', 'noinsert')
 
 -- close preview window
 vim.cmd('autocmd CompleteDone * if !pumvisible() | pclose | endif')

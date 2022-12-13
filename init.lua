@@ -4,7 +4,7 @@ if vim.g.vscode then
 else
   -- normal neovim
   require('bootstrap-packer')
---  require('general')
+  require('general')
 --  require('plugins')
 --  require('ctrlp')
 --  require('lightline')
