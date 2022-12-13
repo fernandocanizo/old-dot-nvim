@@ -38,6 +38,24 @@ return require('packer').startup(function(use)
   use 'https://github.com/williamboman/mason-lspconfig.nvim'
   use 'https://github.com/neovim/nvim-lspconfig'
 
+  -- Completion
+  -- main one
+  use('https://github.com/ms-jpq/coq_nvim', { branch = 'coq' })
+
+  -- 9000+ Snippets
+  -- use 'https://github.com/ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
+  -- lua & third party sources
+  -- Need to **configure separately**
+  -- use {
+  --   'https://github.com/ms-jpq/coq.thirdparty',
+  --   {'branch': '3p' }
+  -- }
+  -- shell repl
+  -- nvim lua api
+  -- scientific calculator
+  -- comment banner
+  -- etc
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
