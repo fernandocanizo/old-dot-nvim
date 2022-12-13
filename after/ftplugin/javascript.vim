@@ -22,6 +22,9 @@ setlocal formatoptions-=tcora formatoptions+=jqn
 " this is not working, for some reason it keeps loading system
 " configuration
 " I edited system configuration, and still sets the 't' flag! WTF!
+" in Lua this will be:
+" vim.opt.formatoptions:append('jqn')
+" vim.opt.formatoptions:remove('tcora')
 
 " Show/hide linter messages
 nmap <F9> :lwindow<enter>
