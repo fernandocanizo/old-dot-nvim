@@ -128,3 +128,6 @@ vim.api.nvim_set_keymap('c', '%s/', '%s/\v', { noremap = true })
 
 -- close preview window
 vim.cmd('autocmd CompleteDone * if !pumvisible() | pclose | endif')
+
+-- always show tabline
+set.showtabline = 2
