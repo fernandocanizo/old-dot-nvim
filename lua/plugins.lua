@@ -57,6 +57,20 @@ return require('packer').startup(function(use)
   -- comment banner
   -- etc
 
+
+  -- Fuzzy finder
+  use {
+    'https://github.com/nvim-telescope/telescope.nvim',
+    tag = '0.1.0',
+    requires = {
+      { 'https://github.com/nvim-lua/plenary.nvim' },
+      -- not required, but don't know how to put optional deps
+      { 'https://github.com/nvim-telescope/telescope-fzy-native.nvim' },
+      { 'https://github.com/nvim-treesitter/nvim-treesitter' },
+      { 'https://github.com/nvim-tree/nvim-web-devicons' },
+    }
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

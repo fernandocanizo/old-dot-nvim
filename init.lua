@@ -14,4 +14,5 @@ else
   require('mappings')
   -- old mappings not yet converted to Lua
   vim.cmd 'source ~/.config/nvim/old-configs/mappings.vimrc'
+  require('telescope-mappings')
 end
