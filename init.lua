@@ -7,10 +7,11 @@ else
   require('pre-plugins')
   require('plugins')
   require('setup-plugins')
+
   require('style')
   require('general')
 
   require('mappings')
+  -- old mappings not yet converted to Lua
   vim.cmd 'source ~/.config/nvim/old-configs/mappings.vimrc'
-  --require('test')
 end
