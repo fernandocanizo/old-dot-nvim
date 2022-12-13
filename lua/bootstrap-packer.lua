@@ -12,10 +12,18 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
+  -- Packer can manage itself
   use 'https://github.com/wbthomason/packer.nvim'
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+
+  -- A better status line and in Lua
+  -- better than: control, lightline, airline
+  use 'https://github.com/nvim-lualine/lualine.nvim'
+  -- these icons require a patched nerd font, which I'm not sure I have
+  -- so I wanna test the basic plugin first, and later gonna make it nice
+  -- use {
+  -- 'https://github.com/nvim-lualine/lualine.nvim'
+  -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  -- }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
