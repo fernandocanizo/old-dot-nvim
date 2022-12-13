@@ -1,22 +1,14 @@
 -- vim.api.nvim_set_keymap(mode, lhs, rhs, options_table)
 
--- explicitly set mapleader to \
-vim.opt.mapleader = '\\'
-
--- new tab ctrl-t
-vim.api.nvim_set_keymap('n', '<c-t>', '<esc>:tabnew<return>')
-
--- switch to left or right ctrl-h ctrl-l
-vim.api.nvim_set_keymap('n', '<Leader>h', ':tabprevious<return>')
-vim.api.nvim_set_keymap('n', '<Leader>l', ':tabnext<return>')
-
 -- buffer navigation
-vim.api.nvim_set_keymap('n', '<c-h>', ':bprevious<enter>')
-vim.api.nvim_set_keymap('n', '<c-l>', ':bnext<enter>')
+vim.api.nvim_set_keymap('n', '<c-h>', ':bprevious<enter>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<c-l>', ':bnext<enter>', { noremap = true })
 
 -- scroll up/down one line keeping current position
-vim.api.nvim_set_keymap('nvso', '<C-j>', '<C-e>j')
-vim.api.nvim_set_keymap('nvso', '<C-k>', '<C-y>k')
+-- TODO bug "shortline is to long: nvso
+-- maybe is an array?
+--vim.api.nvim_set_keymap('nvso', '<C-j>', '<C-e>j', { noremap = true })
+--vim.api.nvim_set_keymap('nvso', '<C-k>', '<C-y>k', { noremap = true })
 
 -- highlight searches
 vim.api.nvim_set_keymap('n', '/', ':set hls<enter>/\v', { noremap = true })
@@ -25,10 +17,23 @@ vim.api.nvim_set_keymap('n', '#', ':set hls<enter>#\v', { noremap = true })
 vim.api.nvim_set_keymap('n', '*', ':set hls<enter>*\v', { noremap = true })
 
 -- toggle search highlighting
-vim.api.nvim_set_keymap('nvso', '<F7>', ':set hls!<enter>:set hls?<enter>')
+-- TODO bug "shortline is to long: nvso
+--vim.api.nvim_set_keymap('nvso', '<F7>', ':set hls!<enter>:set hls?<enter>', { noremap = true })
 
 -- remap quit and macro recording
-vim.api.nvim_set_keymap('n', '<Leader>r', 'q', { noremap = true })
-vim.api.nvim_set_keymap('n', 'q', ':q<enter>')
+vim.api.nvim_set_keymap('n', '<Leader>q', 'q', { noremap = true })
+vim.api.nvim_set_keymap('n', 'q', ':q<enter>', { noremap = true })
+
+-- tab fun
+vim.api.nvim_set_keymap('n', '<Leader><Down>', ':tabnew<return>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader><Left>', ':tabnext<enter>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader><Right>', ':tabNext<enter>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>o', ':tabonly<enter>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader><Up>', ':tabclose<enter>', { noremap = true })
+-- new tab ctrl-t
+
+-- switch to left or right ctrl-h ctrl-l
+--vim.api.nvim_set_keymap('n', '<Leader>h', ':tabprevious<return>')
+--vim.api.nvim_set_keymap('n', '<Leader>l', ':tabnext<return>')
 
 
