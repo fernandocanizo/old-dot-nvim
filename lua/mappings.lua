@@ -5,10 +5,8 @@ vim.api.nvim_set_keymap('n', '<c-h>', ':bprevious<enter>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<c-l>', ':bnext<enter>', { noremap = true })
 
 -- scroll up/down one line keeping current position
--- TODO bug "shortline is to long: nvso
--- maybe is an array?
---vim.api.nvim_set_keymap('nvso', '<C-j>', '<C-e>j', { noremap = true })
---vim.api.nvim_set_keymap('nvso', '<C-k>', '<C-y>k', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-e>j', { noremap = true })
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-y>k', { noremap = true })
 
 -- highlight searches
 vim.api.nvim_set_keymap('n', '/', ':set hls<enter>/\v', { noremap = true })
