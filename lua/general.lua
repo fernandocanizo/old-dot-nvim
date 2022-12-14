@@ -11,7 +11,7 @@ setGlobal.mapleader = ' '
 -- Indentation block
 -- use spaces when TAB is pressed
 set.expandtab = true
-spaces = 2
+local spaces = 2
 -- number of spaces to show for a TAB character
 set.tabstop = spaces
 -- number of spaces for indent function (>>)
@@ -111,14 +111,11 @@ vim.cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red')
 -- Open files completely unfolded
 vim.cmd('au BufRead * normal zR')
 
--- Consider .svelte files as HTML
--- TODO fix next line, buggy
---win.cdm('au! BufNewFile,BufRead *.svelte set ft=html')
-
 -- So vim-gutter (and other based on this setting) reports faster
 -- default is 4000 (4 seconds) which is too much
 set.updatetime = 100
 
+-- TODO not working
 -- regexp: set very magic when doing global substitutions
 vim.api.nvim_set_keymap('c', '%s/', '%s/\v', { noremap = true })
 
