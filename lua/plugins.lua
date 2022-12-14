@@ -62,10 +62,13 @@ return require('packer').startup(function(use)
     run = ':TSUpdate'
   }
 
+  -- Mark modified lines
   use 'https://github.com/airblade/vim-gitgutter'
 
+  -- Add indent guides to code
   use 'https://github.com/lukas-reineke/indent-blankline.nvim'
 
+  -- Many mappings for things that come in pairs
   use 'https://github.com/tpope/vim-unimpaired'
 
   -- honor .editorconfig files on projects
