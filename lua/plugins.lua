@@ -39,7 +39,7 @@ return require('packer').startup(function(use)
   use 'https://github.com/neovim/nvim-lspconfig'
 
   -- Completion
-
+  use {'neoclide/coc.nvim', branch = 'release'}
 
 
   -- Fuzzy finder
