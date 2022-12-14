@@ -66,6 +66,9 @@ return require('packer').startup(function(use)
 
   use 'https://github.com/lukas-reineke/indent-blankline.nvim'
 
+  use 'https://github.com/tpope/vim-unimpaired'
+
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
