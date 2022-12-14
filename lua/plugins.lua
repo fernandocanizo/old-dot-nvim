@@ -68,6 +68,8 @@ return require('packer').startup(function(use)
 
   use 'https://github.com/tpope/vim-unimpaired'
 
+  -- honor .editorconfig files on projects
+  use 'https://github.com/editorconfig/editorconfig-vim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
