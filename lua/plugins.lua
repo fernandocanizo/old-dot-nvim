@@ -66,9 +66,16 @@ return require('packer').startup(function(use)
       { 'https://github.com/nvim-lua/plenary.nvim' },
       -- not required, but don't know how to put optional deps
       { 'https://github.com/nvim-telescope/telescope-fzy-native.nvim' },
-      { 'https://github.com/nvim-treesitter/nvim-treesitter' },
       { 'https://github.com/nvim-tree/nvim-web-devicons' },
     }
+  }
+
+  -- Treesitter
+  use {
+    'https://github.com/nvim-treesitter/nvim-treesitter',
+    -- this may produce an error on a fresh install. Read the
+    -- docs or do a `:TSInstall` and then relaunch nvim
+    run = ':TSUpdate'
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
