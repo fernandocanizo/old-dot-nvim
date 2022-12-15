@@ -1,37 +1,54 @@
 -- vim.api.nvim_set_keymap(mode, lhs, rhs, options_table)
 
+local noremap = { noremap = true }
+
+local function nmap(keyCombo, mapping)
+  vim.api.nvim_set_keymap('n', keyCombo, mapping, noremap)
+end
+
+local function imap(keyCombo, mapping)
+  vim.api.nvim_set_keymap('i', keyCombo, mapping, noremap)
+end
+
 -- buffer navigation
-vim.api.nvim_set_keymap('n', '<c-h>', ':bprevious<enter>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<c-l>', ':bnext<enter>', { noremap = true })
+nmap('<c-h>', ':bprevious<enter>')
+nmap('<c-l>', ':bnext<enter>')
 
 -- scroll up/down one line keeping current position
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-e>j', { noremap = true })
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-y>k', { noremap = true })
+nmap('<C-j>', '<C-e>j')
+nmap('<C-k>', '<C-y>k')
 
 -- highlight searches
-vim.api.nvim_set_keymap('n', '/', ':set hls<enter>/\v', { noremap = true })
-vim.api.nvim_set_keymap('n', '?', ':set hls<enter>?\v', { noremap = true })
-vim.api.nvim_set_keymap('n', '#', ':set hls<enter>#\v', { noremap = true })
-vim.api.nvim_set_keymap('n', '*', ':set hls<enter>*\v', { noremap = true })
+nmap('/', ':set hls<enter>/\v')
+nmap('?', ':set hls<enter>?\v')
+nmap('#', ':set hls<enter>#\v')
+nmap('*', ':set hls<enter>*\v')
 
 -- toggle search highlighting
 -- TODO bug "shortline is to long: nvso
---vim.api.nvim_set_keymap('nvso', '<F7>', ':set hls!<enter>:set hls?<enter>', { noremap = true })
+--vim.api.nvim_set_keymap('nvso', '<F7>', ':set hls!<enter>:set hls?<enter>')
 
 -- remap quit and macro recording
-vim.api.nvim_set_keymap('n', '<Leader>q', 'q', { noremap = true })
-vim.api.nvim_set_keymap('n', 'q', ':q<enter>', { noremap = true })
+nmap('<Leader>q', 'q')
+nmap('q', ':q<enter>')
 
 -- tab fun
-vim.api.nvim_set_keymap('n', '<Leader><Down>', ':tabnew<return>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader><Left>', ':tabnext<enter>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader><Right>', ':tabNext<enter>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>o', ':tabonly<enter>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader><Up>', ':tabclose<enter>', { noremap = true })
--- new tab ctrl-t
+nmap('<Leader><Down>', ':tabnew<return>')
+nmap('<Leader><Left>', ':tabnext<enter>')
+nmap('<Leader><Right>', ':tabNext<enter>')
+nmap('<Leader>o', ':tabonly<enter>')
+nmap('<Leader><Up>', ':tabclose<enter>')
 
--- switch to left or right ctrl-h ctrl-l
---vim.api.nvim_set_keymap('n', '<Leader>h', ':tabprevious<return>')
---vim.api.nvim_set_keymap('n', '<Leader>l', ':tabnext<return>')
+-- toggle cursorline
+nmap('<F6>', ':set cursorline!<enter>:set cursorline?<enter>')
 
+-- toggle search highlighting
+nmap('<F7>', ':set hls!<enter>:set hls?<enter>')
 
+-- shift+insert copies from XA_PRIMARY (mouse selection)
+-- this mapping copies from XA_SECONDARY (clipboard)
+-- equivalent to CTRL-V in other editors
+imap('<c-V>', '"+gP')
+
+-- don't loose your vertical split when closing a buffer
+nmap('<C-c>', ':bp|bd #<enter>')

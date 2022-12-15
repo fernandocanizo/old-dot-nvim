@@ -128,3 +128,5 @@ vim.cmd('autocmd CompleteDone * if !pumvisible() | pclose | endif')
 
 -- always show tabline
 set.showtabline = 2
+
+set.pastetoggle = '<F5>'
