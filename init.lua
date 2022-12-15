@@ -14,6 +14,6 @@ else
   require('mappings')
 
   -- Plugin specific settings and mappings
-  require('lua.coc')
+  require('coc')
   require('telescope-mappings')
 end
