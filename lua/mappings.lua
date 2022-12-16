@@ -66,4 +66,4 @@ nmap('<C-c>', ':bp|bd #<enter>')
 
 require('lukas-reineke.indent-blankline')
 
-require('lua.nvim-telescope.mappings')
+require('nvim-telescope.mappings')
