@@ -94,8 +94,7 @@ vim.cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red')
 vim.cmd([[match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/]])
 
 -- to last position we were editing on this file
--- TODO fix next line, buggy
---vim.cmd('autocmd BufReadPost * if line("'\"") | exe "'\"" | endif')
+vim.cmd([[autocmd BufReadPost * if line("'\"") | exe "'\"" | endif]])
 
 -- Open files completely unfolded
 vim.cmd('au BufRead * normal zR')
