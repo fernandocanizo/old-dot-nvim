@@ -97,7 +97,7 @@ vim.cmd([[match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/]])
 vim.cmd([[autocmd BufReadPost * if line("'\"") | exe "'\"" | endif]])
 
 -- Open files completely unfolded
-vim.cmd('au BufRead * normal zR')
+vim.cmd('autocmd BufRead * normal zR')
 
 -- So vim-gutter (and other based on this setting) reports faster
 -- default is 4000 (4 seconds) which is too much
