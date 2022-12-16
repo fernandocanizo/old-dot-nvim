@@ -107,11 +107,7 @@ set.updatetime = 100
 -- regexp: set very magic when doing global substitutions
 vim.api.nvim_set_keymap('c', '%s/', '%s/\v', { noremap = true })
 
--- completeopt+=noselect disables tab completion, don't use it
--- TODO fix next line, buggy
---vim.opt.completeopt.append('menuone', 'noinsert')
-
--- close preview window
+-- automatically close preview window
 vim.cmd('autocmd CompleteDone * if !pumvisible() | pclose | endif')
 
 -- always show tabline
