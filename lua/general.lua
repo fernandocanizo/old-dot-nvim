@@ -101,8 +101,7 @@ set.splitright = true
 --   - no empty lines with spaces
 vim.cmd('highlight ExtraWhitespace ctermbg=red guibg=red')
 vim.cmd('autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red')
--- TODO fix next line, buggy
---vim.cmd('match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/')
+vim.cmd([[match ExtraWhitespace /\v\s+$|\s+\t+|\t+\s+|^\s+$/]])
 
 -- to last position we were editing on this file
 -- TODO fix next line, buggy
