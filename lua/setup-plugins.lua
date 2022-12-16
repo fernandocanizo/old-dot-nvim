@@ -119,5 +119,5 @@ require('nvim-treesitter.configs').setup {
 }
 
 require('indent_blankline').setup {
-  filetype_exclude = { 'markdown' },
+  filetype_exclude = { 'markdown', 'help' },
 }
