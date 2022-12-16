@@ -13,6 +13,10 @@ local function imap(keyCombo, mapping)
   vim.api.nvim_set_keymap('i', keyCombo, mapping, noremap)
 end
 
+local function cmap(keyCombo, mapping)
+  vim.api.nvim_set_keymap('c', keyCombo, mapping, noremap)
+end
+
 
 --
 -- Map my way!
@@ -27,13 +31,16 @@ nmap('<C-j>', '<C-e>j')
 nmap('<C-k>', '<C-y>k')
 
 -- highlight searches
-nmap('/', ':set hls<enter>/\v')
-nmap('?', ':set hls<enter>?\v')
-nmap('#', ':set hls<enter>#\v')
-nmap('*', ':set hls<enter>*\v')
+nmap('/', [[:set hls<enter>/\v]])
+nmap('?', [[:set hls<enter>?\v]])
+nmap('#', [[:set hls<enter>#\v]])
+nmap('*', [[:set hls<enter>*\v]])
 
 -- toggle search highlighting
 nmap('<F7>', ':set hls!<enter>:set hls?<enter>')
+
+-- regexp: set very magic when doing global substitutions
+cmap([[%s/]], [[%s/\v]])
 
 -- remap quit and macro recording
 nmap('<Leader>q', 'q')
