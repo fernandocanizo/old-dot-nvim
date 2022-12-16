@@ -33,6 +33,7 @@ set.autoindent = true
 -- 125 columns is good for git's pull request view
 -- but I like to work with vsplits, hence this width
 set.textwidth = 65
+
 -- highlight next column after textwidth (vertical red bar to
 -- show visually when to stop writting or wrap manually some
 -- code)
@@ -76,20 +77,9 @@ set.joinspaces = false
 -- allow me to switch to another buffer even if I haven't written my changes
 set.hidden = true
 
--- TODO not working
 -- highlight current line
--- Note: for some reason this doesn't work from here, but if you put it as
--- ex command by hand, does work (WTF?!)
 vim.cmd('hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white')
-vim.cmd('hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=white guibg=darkgrey guifg=white')
--- vim.api.nvim_set_keymap(mode, lhs, rhs, options_table)
--- TODO next line gives error
---vim.api.nvim_set_keymap('nvso', '<F6>' ':set cursorline!<enter>:set cursorline?<enter>')
-vim.api.nvim_set_keymap('n', '<Leader>c', ':set cursorcolumn!<enter>:set cursorcolumn?<enter>', { noremap = true })
 set.cursorline = true
--- highlight current line the same way on any colorscheme
-vim.cmd('autocmd ColorScheme * highlight StatusLine ctermbg=darkgrey cterm=NONE guibg=darkgrey gui=NONE')
-
 
 -- more intuitive way to put the new split
 set.splitbelow = true
