@@ -2,6 +2,9 @@
 
 local noremap = { noremap = true }
 
+--
+-- Define some helper functions
+--
 local function nmap(keyCombo, mapping)
   vim.api.nvim_set_keymap('n', keyCombo, mapping, noremap)
 end
@@ -9,6 +12,11 @@ end
 local function imap(keyCombo, mapping)
   vim.api.nvim_set_keymap('i', keyCombo, mapping, noremap)
 end
+
+
+--
+-- Map my way!
+--
 
 -- buffer navigation
 nmap('<c-h>', ':bprevious<enter>')
@@ -25,8 +33,7 @@ nmap('#', ':set hls<enter>#\v')
 nmap('*', ':set hls<enter>*\v')
 
 -- toggle search highlighting
--- TODO bug "shortline is to long: nvso
---vim.api.nvim_set_keymap('nvso', '<F7>', ':set hls!<enter>:set hls?<enter>')
+nmap('<F7>', ':set hls!<enter>:set hls?<enter>')
 
 -- remap quit and macro recording
 nmap('<Leader>q', 'q')
@@ -41,9 +48,6 @@ nmap('<Leader><Up>', ':tabclose<enter>')
 
 -- toggle cursorline
 nmap('<F6>', ':set cursorline!<enter>:set cursorline?<enter>')
-
--- toggle search highlighting
-nmap('<F7>', ':set hls!<enter>:set hls?<enter>')
 
 -- shift+insert copies from XA_PRIMARY (mouse selection)
 -- this mapping copies from XA_SECONDARY (clipboard)
