@@ -52,3 +52,5 @@ imap('<c-V>', '"+gP')
 
 -- don't loose your vertical split when closing a buffer
 nmap('<C-c>', ':bp|bd #<enter>')
+
+require('lukas-reineke.indent-blankline')
