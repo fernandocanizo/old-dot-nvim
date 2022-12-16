@@ -15,5 +15,4 @@ else
 
   -- Plugin specific settings and mappings
   require('coc')
-  require('telescope-mappings')
 end
