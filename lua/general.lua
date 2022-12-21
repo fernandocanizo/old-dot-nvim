@@ -115,3 +115,11 @@ vim.api.nvim_set_keymap('c', '%s/', '%s/\v', { noremap = true })
 -- automatically close preview window
 vim.cmd('autocmd CompleteDone * if !pumvisible() | pclose | endif')
 
+-- Set indent-blankline guide character
+-- Note: tried to set this up on `setup-plugin.lua` file, but produced
+-- errors
+setGlobal.indent_blankline_char = '┊'
+-- start with disabled indent guides. They are pretty annoying
+-- but gonna keep the plugin to be able to show them on deman
+setGlobal.indent_blankline_enabled = false
+
