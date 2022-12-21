@@ -40,37 +40,38 @@ require('mason').setup({
   },
 })
 
-require('mason-lspconfig').setup()
+lspconfig = require('lspconfig')
 
--- Gonna try automatic LSP server setup via mason first
--- If you use this approach, make sure you don't also manually set up servers
--- directly via `lspconfig` as this will cause servers to be set up more than
--- once.
-
-require('mason-lspconfig').setup_handlers {
-  -- The first entry (without a key) will be the default handler
-  -- and will be called for each installed server that doesn't have
-  -- a dedicated handler.
-
-  function (server_name) -- default handler (optional)
-    require('lspconfig')[server_name].setup {}
-  end,
-
-  -- Next, you can provide a dedicated handler for specific servers.
-  ['sumneko_lua'] = function ()
-    require('lspconfig').sumneko_lua.setup {
-      settings = {
-        Lua = {
-          diagnostics = {
-            -- Get the language server to recognize the `vim` global
-            globals = { 'vim' }
-          }
-        }
-      }
-    }
-  end,
-
+-- Don't use Mason for LSP configuration. Didn't work. Just go
+-- with `neovim/nvim-lspconfig` docs
+lspconfig.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
 }
+
+
+lspconfig.elixirls.setup{
+  cmd = { "/home/flc/.local/share/nvim/mason/bin/elixir-ls" };
+}
+
 
 require('nvim-treesitter.configs').setup {
   -- A list of parser names, or 'all'

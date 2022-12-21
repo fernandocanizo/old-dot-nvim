@@ -35,7 +35,6 @@ return require('packer').startup(function(use)
   -- Lazy-loading the plugin, or somehow deferring the setup, is not
   -- recommended.
   use 'https://github.com/williamboman/mason.nvim'
-  use 'https://github.com/williamboman/mason-lspconfig.nvim'
   use 'https://github.com/neovim/nvim-lspconfig'
 
   -- Completion
