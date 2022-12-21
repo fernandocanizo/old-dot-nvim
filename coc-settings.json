@@ -1,4 +1,11 @@
 {
   "Lua.telemetry.enable": true,
-  "coc.preferences.extensionUpdateCheck": "weekly"
+  "coc.preferences.extensionUpdateCheck": "weekly",
+  "codeLens.enable": true,
+  "languageserver": {
+    "elixirLS": {
+      "command": "/home/flc/.local/share/nvim/mason/bin/elixir-ls",
+      "filetypes": ["elixir", "eelixir"]
+    }
+  }
 }
