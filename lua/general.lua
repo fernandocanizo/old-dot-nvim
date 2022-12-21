@@ -85,6 +85,11 @@ set.cursorline = true
 set.splitbelow = true
 set.splitright = true
 
+-- always show tabline
+set.showtabline = 2
+
+set.pastetoggle = '<F5>'
+
 -- highlight unwanted spaces:
 --   - no trailing spaces
 --   - no tab/spaces mixing
@@ -110,7 +115,3 @@ vim.api.nvim_set_keymap('c', '%s/', '%s/\v', { noremap = true })
 -- automatically close preview window
 vim.cmd('autocmd CompleteDone * if !pumvisible() | pclose | endif')
 
--- always show tabline
-set.showtabline = 2
-
-set.pastetoggle = '<F5>'
