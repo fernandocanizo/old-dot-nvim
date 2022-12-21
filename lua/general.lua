@@ -108,8 +108,8 @@ vim.cmd('autocmd BufRead * normal zR')
 -- default is 4000 (4 seconds) which is too much
 set.updatetime = 100
 
--- TODO not working
 -- regexp: set very magic when doing global substitutions
+-- Note: you have to type it fast for the replacement to work
 vim.api.nvim_set_keymap('c', '%s/', '%s/\v', { noremap = true })
 
 -- automatically close preview window
