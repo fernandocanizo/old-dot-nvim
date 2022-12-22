@@ -46,6 +46,10 @@ cmap([[%s/]], [[%s/\v]])
 nmap('<Leader>q', 'q')
 nmap('q', ':q<enter>')
 
+-- I always keep the Shift key pressed a little bit more than
+-- needed
+cmap('W<enter>', 'w<enter>')
+
 -- tab fun
 nmap('<Leader><Down>', ':tabnew<return>')
 nmap('<Leader><Left>', ':tabnext<enter>')
