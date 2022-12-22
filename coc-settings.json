@@ -6,6 +6,11 @@
     "elixirLS": {
       "command": "/home/flc/.local/share/nvim/mason/bin/elixir-ls",
       "filetypes": ["elixir", "eelixir"]
+    },
+    "lua": {
+      "command": "/home/flc/.local/share/nvim/mason/bin/lua-language-server",
+      "rootPatterns": [".git"],
+      "filetypes": ["lua"]
     }
   }
 }
