@@ -14,5 +14,7 @@ else
   require('mappings')
 
   -- Plugin specific settings and mappings
-  require('coc')
+  require('lukas-reineke.indent-blankline')
+  require('nvim-telescope.mappings')
+  require('neoclide.coc')
 end
