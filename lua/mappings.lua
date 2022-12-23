@@ -49,6 +49,7 @@ nmap('q', ':q<enter>')
 -- I always keep the Shift key pressed a little bit more than
 -- needed
 cmap('W<enter>', 'w<enter>')
+cmap('X<enter>', 'x<enter>')
 
 -- tab fun
 nmap('<Leader><Down>', ':tabnew<return>')
