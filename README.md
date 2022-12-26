@@ -1,5 +1,7 @@
 # dot-nvim
 
+**2022-12-26 Note:** Archiving this as I'm not using it anymore. Started a [new one](https://github.com/fernandocanizo/nvim) almost from scratch using [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) as a bootstrap.
+
 This is my Neovim configuration, with a `packer` installer to bootstrap installation automatically on fresh cloning.
 
 1. Export `XDG_CONFIG_HOME` shell environment variable so `nvim` knows where to
